@@ -1,0 +1,11 @@
+version: '3'
+services:
+    api-service:
+        build: .
+        volumes:
+            - .:/tf
+        ports:
+            - 5001:5001
+        environment:
+            PORT: 5001
+            FLASK_DEBUG: 1
